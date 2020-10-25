@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix::after{
+            clear: both;
+            display: block;
+            content: "";
+        }
+        body{
+            font-size: 16px;
+        }
+        .hung{
+            width:1001px ;
+            margin: 0px auto;
+            background-color: rgb(209, 204, 204);
+            
+            
+        }
+        .nav ul{
+            list-style: none;
+            margin: 0px;
+            padding: 0 10px;
+
+            box-sizing: border-box;
+            background-color: white;
+
+        }
+
+        .nav ul > li{
+            float: right;
+            width: 150px;
+            padding: 20px 20px;    
+            
+        }
+        
+        .content{
+            width: 100%;
+        }
+        .sidebar-right{
+            width: 59%;
+            float:right;
+            box-sizing: border-box;
+            height: 500px;
+            border: solid 1px grey;
+            background-color:white;   
+
+        
+        }
+        .sidebar-left{
+            width: 40%;
+            float: left;
+            box-sizing: border-box;
+            height: 500px;
+            background-color: white; 
+            border: solid 1px grey;
+
+           
+        }
+
+    
+    </style>
+</head>
+<body>
+<div class="hung">
+   
+        <nav class="nav">
+            <ul class="clearfix">
+            <li style="margin-right: 180px;"><h3>Tạo tài khoản</h3></li>
+            <li style="margin-left: 100px;"><h3>Đăng nhập</h3></li>
+            </ul>
+        
+        </nav>
+    <div class="content clearfix">
+    <form action="" name="tiki" method="POST">
+        
+        <aside class="sidebar sidebar-right">
+            <div><br>
+                <label style="margin-left: 20px;">Họ tên</label>
+                <input type="text" name="hoten" placeholder="Nhập họ và tên" value=""style="margin-left: 37px;">
+            </div>
+            <div><br>
+                <label style="margin-left: 20px;">SĐT</label>
+                <input type="text" name="sdt" placeholder="Nhập số điện thoại"style="margin-left: 50px;">
+                <button style="background-color: yellow;width: 30%; margin-right: 40px;">Mã xác thực</button>
+            </div>
+            <div><br>
+                <label style="margin-left: 20px;">Mã xác thực</label>
+                <input type="text" name="maxacthuc" placeholder="nhập mã xác thức">
+            </div>
+            <div><br>
+                <label style="margin-left: 20px;">Email</label>
+                <input type="email" name="email" placeholder="Nhập email vào"style="margin-left: 41px;"> 
+            </div></br>
+            <div>
+                <label style="margin-left: 20px;">Mật khẩu</label>
+                <input type="password" name="matkhau" placeholder="nhập mật khẩu"style="margin-left: 20px;">
+            </div></br>
+            <div>
+                <label style="margin-left: 20px;">Giới tính</label>
+                <input type="radio" name="gioitinh" value="0"style="margin-left: 50px;">Nam
+                <input type="radio" name="gioitinh" value="1"style="margin-left: 50px;">Nữ
+            </div>
+            <div><br>
+                <label style="margin-left: 20px;">Ngày Sinh</label>
+                <select id="ngaysinh" name="ngaysinh">
+                    <script>
+                        for(var n=1;n<=31;n++){
+                            document.getElementById("ngaysinh").innerHTML="Ngày"+n;
+                        }
+                    </script>
+                </select>
+                
+            </div>
+            <div><br>
+                <input name="nhanthongbao" value="1" type="checkbox" style="margin-left: 80px;" >Nhận các thông tin và chương trình khuyến mãi của Tiki qua Email
+            </div>
+            <div><br>
+                <input name="taotaikhoan" value="Tạo tài khoản" type="submit" style=" background-color: yellow; width: 50%; padding: 16px 20px;  margin-left: 80px;">
+            </div>
+            <div><br>
+                
+                
+                <p style="margin-left: 80px;">Khi bạn nhấn Đăng ký, bạn đã đồng ý thực hiện mọi giao dịch mua bán theo<a href="https://hotro.tiki.vn/hc/vi/articles/201971214"> điều kiện sử dụng và chính sách của Tiki.</a>
+                </p>
+            </div>
+
+        </aside>
+        <aside class="sidebar sidebar-left">;
+            <span style="text-align: center;"><h2>Tọa tài khoản</h2></span>
+            <p style="color: grey;">Tạo tài khoản để theo dõi đơn hàng, lưu danh sách sản phẩm yêu thích, nhận nhiều ưu đãi hấp dẫn</p>
+            <img src="graphic-map.png" alt="tiki">
+        </aside>
+    
+    </form>
+    </div>
+    
+</div> 
+</body>
+</html>
